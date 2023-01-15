@@ -3,6 +3,21 @@ body {
   background-color: #ffffff;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --main-text-color: #2e2f42;
   --second-text-color: #434455;
@@ -15,6 +30,15 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px;
 }
 
 .visually-hidden {
@@ -33,9 +57,16 @@ body {
 /*---------- HEADER ----------*/
 
 .header {
+  border-bottom: 1px solid #E7E9FC;
+}
+
+.header-container{
+  display: flex;
 }
 
 .header-navigation {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo-first {
@@ -46,6 +77,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-logo {
@@ -56,17 +89,25 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 76px;
 }
 
-/* .header-list {}
+.header-list {
+  display: flex;
+  gap: 40px;
+}
 
-.header-item {} */
+/* .header-item {}  */
 
 .header-link {
   font-weight: var(--dominant-font-weight);
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-link:focus,
@@ -74,9 +115,19 @@ body {
   color: #404bbf;
 }
 
-/* .header-auth {}
+.header-auth {
+  margin-left: auto;
+}
 
-.header-auth-list {} */
+.header-auth-list {
+  display: flex;
+  gap: 40px;
+}
+
+.header-auth-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 
 .header-auth-mail {
   font-style: normal;
@@ -107,13 +158,23 @@ body {
 .hero {
   background-color: #2e2f42;
 }
+  
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
 
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
+  padding-bottom: 48px;
+  max-width: 494px;
+  margin: 0 auto ;
+  text-align: center;
 }
+
 
 .hero-btn {
     font-family: 'Roboto';
@@ -124,8 +185,14 @@ body {
     cursor: pointer;
     color: #FFFFFF;
     background: #4D5AE5;
-    
-}
+    border: 0;
+    border-radius: 4px;
+    padding: 16px 32px 16px 32px;
+    min-width: 169px;
+    display: block;
+    margin: 0 auto;
+  }
+
 
 .hero-btn:focus,
 .hero-btn:hover {
@@ -135,15 +202,20 @@ body {
 /*---------- BENEFITS(STUDIO) ----------*/
 
 .benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .benefits-title {
 }
 
 .benefits-list {
+  display: flex;
+  gap: 24px;
 }
 
 .benefits-item {
+  width: calc((100% - 24px) / 4);
 }
 
 .benefits-subtitle {
@@ -152,6 +224,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  margin-bottom: 8px;
+  width: calc((100% - 24px) / 4);
 }
 
 .benefits-text {
@@ -160,10 +234,12 @@ body {
   color: var(--second-text-color);
 }
 
-/*---------- DOINS(STUDIO) ----------*/
+/*---------- DOINGS(STUDIO) ----------*/
 
 .doings {
+  padding-bottom: 120px;
 }
+
 
 .doings-title {
   font-size: 36px;
@@ -171,12 +247,27 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-text-color);
+  padding-bottom: 72px;
+  text-align: center;
+}
+
+.doings-list {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.doings-item {
+  border: 1px solid #E7E9FC;
+  width: calc((100% - 48px) / 3);
 }
 
 /*---------- TEAM(STUDIO) ----------*/
 
 .team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-title {
@@ -185,17 +276,28 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-text-color);
+  margin-bottom: 72px;
+  text-align: center;
 }
 
 .team-list {
-  /* background-color: #FFFFFF ; */
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
 }
 
 .team-item {
-  /* background-color: #FFFFFF; */
+  background-color: #FFFFFF;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-img {
+  
+}
+
+.team-name-container {
+  padding: 32px 16px;
 }
 
 .team-name {
@@ -205,6 +307,8 @@ body {
   letter-spacing: 0.02em;
   background-color: #ffffff;
   color: var(--main-text-color);
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-position {
@@ -213,12 +317,18 @@ body {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
   background-color: #ffffff;
+  text-align: center;
 }
 
 /*---------- FOOTER ----------*/
 
 .footer {
   background-color: #2e2f42;
+}
+
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -244,14 +354,18 @@ body {
 }
 
 .footer-text {
+  max-width: 264px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
+  padding-top: 16px;
+  
 }
 
 /*---------- WORKS(PORTFOLIO) ----------*/
 
 .works {
+  margin-bottom: 120px;
 }
 
 .works-title {
@@ -261,6 +375,11 @@ body {
 }
 
 .works-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 96px;
+  padding-bottom: 72px;
 }
 
 .works-item {
@@ -274,7 +393,9 @@ body {
   letter-spacing: 0.04em;
   cursor: pointer;
   color: #4d5ae5;
-  background: #F4F4FD
+  background: #F4F4FD;
+  border: 1px solid #E7E9FC;
+  border-radius: 4px;
 }
 
 .works-btn:focus,
@@ -286,10 +407,33 @@ body {
 .works-subtitle {
 }
 
+.works-container {
+      width: 1158px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      outline: 2px ;
+    }
+
 .works-img-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  justify-content: center;
 }
 
 .works-img-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.cards-container {
+  max-width: 360px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid #E7E9FC;
+  border-top: transparent; 
 }
 
 .works-text {
@@ -298,6 +442,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  padding-left: 16px;
+  
 }
 
 .works-tagline {
@@ -306,4 +452,5 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
+  padding-left: 16px;
 }
